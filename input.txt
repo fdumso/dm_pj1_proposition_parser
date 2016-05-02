@@ -1,0 +1,1 @@
+((z \eq (\not (c \imply (\not (D \eq J))))) \or ((\not a) \imply (\not B)))

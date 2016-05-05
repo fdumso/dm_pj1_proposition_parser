@@ -5,4 +5,9 @@ public class PropositionalLetter extends Proposition {
     public PropositionalLetter(String text) {
         super(text);
     }
+
+    @Override
+    public void printSuc() {
+
+    }
 }

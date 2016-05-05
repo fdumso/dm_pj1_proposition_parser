@@ -17,8 +17,8 @@ public class Main {
                 if (proposition == null) {
                     System.out.print(str + "\tis not a valid proposition!");
                 } else {
-                    FormationTree tree = new FormationTree(proposition);
-                    tree.print();
+                    System.out.println(proposition.toString());
+                    proposition.printSuc();
                 }
             }
         } catch (FileNotFoundException e) {

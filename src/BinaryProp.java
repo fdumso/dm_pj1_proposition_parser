@@ -21,11 +21,10 @@ public class BinaryProp extends Proposition {
         return second;
     }
 
-    public void setFirst(Proposition first) {
-        this.first = first;
-    }
-
-    public void setSecond(Proposition second) {
-        this.second = second;
+    @Override
+    public void printSuc() {
+        System.out.println(getFirst().toString() + "\t" + getSecond().toString());
+        getFirst().printSuc();
+        getSecond().printSuc();
     }
 }

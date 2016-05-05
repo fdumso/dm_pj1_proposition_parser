@@ -17,7 +17,7 @@ public class Parser {
                     if (string.charAt(1) == '_' && string.charAt(2) == '{' && string.charAt(string.length()-1) == '}' && string.length() > 4) {
                         new PropositionalLetter(string);
                     } else return null;
-                } else return new Proposition(string);
+                } else return new PropositionalLetter(string);
             } else return null;
         }
         Stack<Object> stack = new Stack<>();

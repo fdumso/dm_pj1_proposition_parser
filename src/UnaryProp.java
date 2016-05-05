@@ -14,4 +14,10 @@ public class UnaryProp extends Proposition {
     public Proposition getProposition() {
         return proposition;
     }
+
+    @Override
+    public void printSuc() {
+        System.out.println(getProposition().toString());
+        getProposition().printSuc();
+    }
 }

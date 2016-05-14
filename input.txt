@@ -1,1 +1,17 @@
+a
+(\not a)
+ ( \not (\not A_{3})  )
+((\not a) \and (Z_{0} \eq p))
+(\not(\not(\not(\not(\not(\not(\not(\not(\not(\not(\not(\not(\not(\not a))))))))))))))
 ((z \eq (\not (c \imply (\not (D \eq J))))) \or ((\not a) \imply (\not B)))
+\
+(a)
+((\not a))
+((a \imply b))
+((a \and b
+s_{}
+(\not Se_{32)
+(a \f b)
+(a a \and b)
+((\not jf_) \imply b)
+(a \imply (b))

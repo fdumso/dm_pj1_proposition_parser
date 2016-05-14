@@ -1,63 +1,34 @@
 import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
  * Created by freemso on 2016/5/2.
  */
 public class Main {
+    private static final String inputFile = "input.txt";
+    private static final String outputFile = "output.txt";
+
     public static void main(String[] args) {
-        test();
         try {
-            Scanner scanner = new Scanner(new File("input.txt"));
+            Scanner scanner = new Scanner(new File(inputFile));
+            FileWriter writer = new FileWriter(new File(outputFile));
             while (scanner.hasNextLine()) {
                 String str = scanner.nextLine();
+                if (str.charAt(0) == '#') break;
                 Parser parser = new Parser();
                 Proposition proposition = parser.parse(str);
                 if (proposition == null) {
-                    System.out.println("no");
+                    writer.write(str + " ======= no\n");
                 } else {
-                    System.out.println("yes");
+                    writer.write(str + " ======= yes\n");
                 }
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("no input file!");
+            scanner.close();
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("no input/output file!");
         }
-    }
-
-    private static void testValidCase(String str) {
-        Parser parser = new Parser();
-        if (parser.parse(str) == null) {
-            System.err.println("Test failed: " + str);
-        }
-    }
-
-    private static void testInvalidCase(String str) {
-        Parser parser = new Parser();
-        if (parser.parse(str) != null) {
-            System.err.println("Test failed: " + str);
-        }
-    }
-
-    public static void test() {
-        testValidCase("a");
-        testValidCase("(\\not a)");
-        testValidCase(" ( \\not (\\not A_{3})  ) ");
-        testValidCase("((\\not a) \\and (Z_{0} \\eq p))");
-        testValidCase("(\\not(\\not(\\not(\\not(\\not(\\not(\\not(\\not(\\not(\\not(\\not(\\not(\\not(\\not a))))))))))))))");
-        testValidCase("((z \\eq (\\not (c \\imply (\\not (D \\eq J))))) \\or ((\\not a) \\imply (\\not B)))");
-
-        testInvalidCase("");
-        testInvalidCase("\\");
-        testInvalidCase("(a)");
-        testInvalidCase("((\\not a))");
-        testInvalidCase("((a \\imply b))");
-        testInvalidCase("((a \\and b");
-        testInvalidCase("s_{}");
-        testInvalidCase("(\\not Se_{32)");
-        testInvalidCase("(a \\f b)");
-        testInvalidCase("(a a \\and b)");
-        testInvalidCase("((\\not jf_) \\imply b)");
-        testInvalidCase("(a \\imply (b))");
     }
 }

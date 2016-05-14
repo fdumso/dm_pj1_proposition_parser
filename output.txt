@@ -1,0 +1,17 @@
+a ======= yes
+(\not a) ======= yes
+ ( \not (\not A_{3})  ) ======= yes
+((\not a) \and (Z_{0} \eq p)) ======= yes
+(\not(\not(\not(\not(\not(\not(\not(\not(\not(\not(\not(\not(\not(\not a)))))))))))))) ======= yes
+((z \eq (\not (c \imply (\not (D \eq J))))) \or ((\not a) \imply (\not B))) ======= yes
+\ ======= no
+(a) ======= no
+((\not a)) ======= no
+((a \imply b)) ======= no
+((a \and b ======= no
+s_{} ======= no
+(\not Se_{32) ======= no
+(a \f b) ======= no
+(a a \and b) ======= no
+((\not jf_) \imply b) ======= no
+(a \imply (b)) ======= no

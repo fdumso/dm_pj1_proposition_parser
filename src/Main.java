@@ -15,14 +15,13 @@ public class Main {
                 Parser parser = new Parser();
                 Proposition proposition = parser.parse(str);
                 if (proposition == null) {
-                    System.out.print(str + "\tis not a valid proposition!");
+                    System.out.println("no");
                 } else {
-                    System.out.println(proposition.toString());
-                    proposition.printSuc();
+                    System.out.println("yes");
                 }
             }
         } catch (FileNotFoundException e) {
-            System.out.print("no input file!");
+            System.out.println("no input file!");
         }
     }
 

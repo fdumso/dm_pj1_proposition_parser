@@ -1,14 +1,14 @@
 # Proposition parser
 
 ## Intro.
-This is a proposition parser program for discrete math class lab.
+This is a proposition parser program for discrete math course lab.
 
 ## Package Structure
-src/  ->  source code  
-input.txt  ->  propositions for parsing  
-output.txt  ->  parsing result  
-README.md  ->  this file  
-.gitignore  ->  git ignore file  
+- `src/`: source code  
+- `input.txt`: propositions for parsing  
+- `output.txt`: parsing result  
+- `README.md`: this file  
+- `.gitignore`: git ignore file  
 
 ## Implementation
 Using stack, class Parser read the proposition string from left to right and split it into small propositions recursively.
